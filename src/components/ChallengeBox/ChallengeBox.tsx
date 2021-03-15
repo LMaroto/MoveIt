@@ -1,7 +1,8 @@
 import { useContext } from 'react';
-import { ChallengesContext } from '../contexts/ChallengesContext';
-import { CountdownContext } from '../contexts/CountdownContext';
-import styles from '../styles/components/ChallengeBox.module.css';
+import { ChallengesContext } from '../../contexts/ChallengesContext';
+import { CountdownContext } from '../../contexts/CountdownContext';
+import styles from '../../styles/components/ChallengeBox.module.css';
+import { ChallengeActive, ChallengeFailedButton, ChallengeSucceededButton, Container } from './styles';
 
 export function ChallengeBox() {
 
@@ -19,11 +20,10 @@ export function ChallengeBox() {
     }
 
     return(
-        <div className={styles.challengeBoxContainer}>
-
+        <Container>
         {
             activeChallenge ? (
-                <div className={styles.challengeActive}>
+                <ChallengeActive>
                     <header>Ganhe {activeChallenge.amount} xp</header>
                     <main>
                         <img src={`icons/${activeChallenge.type}.svg`}/>
@@ -31,21 +31,20 @@ export function ChallengeBox() {
                         <p>{activeChallenge.description}</p>
                     </main>
                     <footer>
-                        <button 
+                        <ChallengeFailedButton 
                         type="button"
-                        className={styles.challengeFailedButton}
                         onClick={handleChallengeFailed}>
                             Falhei
-                        </button>
+                        </ChallengeFailedButton>
                         
-                        <button
+                        <ChallengeSucceededButton
                         type="button"
                         className={styles.challengeSucceededButton}
                         onClick={handleChallengeSucceeded}>
                         Completei
-                        </button>
+                        </ChallengeSucceededButton>
                     </footer>
-                </div>
+                </ChallengeActive>
             ) : (
         
             <div className={styles.challengeNotActive}>
@@ -57,6 +56,6 @@ export function ChallengeBox() {
             </div>
             )}
 
-        </div>
+        </Container>
     )
 }
