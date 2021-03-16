@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import {GetServerSideProps} from 'next'
 
-import { CompletedChallenges } from '../components/CompletedChallenges';
-import { Countdown } from '../components/Countdown';
+import { CompletedChallenges } from '../components/CompletedChallenges/CompletedChallenges';
+import { Countdown } from '../components/Countdown/Countdown';
 import {ExperienceBar} from '../components/ExperienceBar';
 import { Profile } from '../components/Profile';
 import { ChallengeBox } from '../components/ChallengeBox/ChallengeBox';

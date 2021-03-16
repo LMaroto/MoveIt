@@ -43,38 +43,38 @@ export const ChallengeActive = styled.div`
         p{
             line-height: 1.5;
         }
-
+    }
         footer{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
-            
-            button{
-                height: 3rem;
-                display: flex;
-                align-items: center;
-
-                border: 0;
-                border-radius: 5px;
-
-                color: var(--white);
-
-                font-size: 1rem;
-                font-weight: 600;
-
-                transition: filter 0.2s;
-
-                &:hover{
-                    filter: brightness(0.9);
-                }
-            }
-            
         }
+    
+`
+export const BaseButton = styled.button`
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border: 0;
+    border-radius: 5px;
+
+    color: var(--white);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: filter 0.2s;
+
+    &:hover{
+        filter: brightness(0.9);
     }
 `
-export const ChallengeFailedButton = styled.button`
+
+export const ChallengeFailedButton = styled(BaseButton)`
     background: var(--red);
 `
-export const ChallengeSucceededButton = styled.button`
+export const ChallengeSucceededButton = styled(BaseButton)`
     background: var(--green);
 `
