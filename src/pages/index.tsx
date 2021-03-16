@@ -3,7 +3,7 @@ import {GetServerSideProps} from 'next'
 
 import { CompletedChallenges } from '../components/CompletedChallenges/CompletedChallenges';
 import { Countdown } from '../components/Countdown/Countdown';
-import {ExperienceBar} from '../components/ExperienceBar';
+import {ExperienceBar} from '../components/ExperienceBar/ExperienceBar';
 import { Profile } from '../components/Profile';
 import { ChallengeBox } from '../components/ChallengeBox/ChallengeBox';
 

@@ -51,6 +51,31 @@ export const ChallengeActive = styled.div`
         }
     
 `
+export const ChallengeNotActive = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    strong {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 1.4;
+    }
+
+    p{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+        line-height: 1.4;
+        max-width: 80%;
+        margin: 3rem auto 0 auto;
+    }
+    
+    img{
+        margin-right: 1rem;
+    }
+`
 export const BaseButton = styled.button`
     height: 3rem;
     display: flex;
